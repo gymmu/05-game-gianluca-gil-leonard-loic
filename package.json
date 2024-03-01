@@ -12,7 +12,10 @@
   "keywords": [],
   "author": "Cedric Geissmann <cedric.geissmann@sbl.ch>",
   "contributors": [
-    "e282266@edu.sbl.ch"
+    "e282266@edu.sbl.ch",
+    "e282250@edu.sbl.ch",
+    "e282243@edu.sbl.ch",
+    "e249795@edu.sbl.ch"
   ],
   "license": "ISC",
   "devDependencies": {
