@@ -26,7 +26,7 @@ export default function loadSprites() {
         idleDown: 1, // Ist es nur eine Kachel, kann diese direkt angegeben werden.
         runLeft: { from: 3, to: 5, loop: true, speed: 10 }, // Die Geschwindigkeit der Animation kann auch verändert werden.
         idleLeft: 4,
-        runRight: { from: 6, to: 8, loop: true },
+        runRight: { from: 6, to: 8, loop: true, speed: 10 },
         idleRight: 7,
         runUp: { from: 9, to: 11, loop: true, speed: 5 },
         idleUp: 10,

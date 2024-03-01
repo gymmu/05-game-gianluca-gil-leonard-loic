@@ -1,5 +1,5 @@
 {
-  "name": "05-game-project",
+  "name": "THE FULL IMMERSIVE CRAZY GAME",
   "version": "0.1.8",
   "description": "Einstiegspunkt in ein Spielprojekt.",
   "type": "module",
@@ -11,7 +11,9 @@
   },
   "keywords": [],
   "author": "Cedric Geissmann <cedric.geissmann@sbl.ch>",
-  "contributors": [],
+  "contributors": [
+    "e282266@edu.sbl.ch"
+  ],
   "license": "ISC",
   "devDependencies": {
     "eslint": "^8.57.0",
