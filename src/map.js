@@ -48,7 +48,7 @@ export async function generateMapRPG(mapfile) {
       } else if (char === "t") {
         GameObjects.treeRPG(x, y)
       } else if (char === "f") {
-        GameObjects.flowerRPG(x, y)
+        GameObjects.keyRPG(x, y)
       } else if (char === "m") {
         GameObjects.mushroomRPG(x, y)
       }

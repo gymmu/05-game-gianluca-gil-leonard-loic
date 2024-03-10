@@ -20,13 +20,13 @@ k.scene("level-01", async () => {
   addGeneralGameLogic()
 
   k.onCollide("player", "cave", (player) => {
-    if (player.hasFlower === true) {
+    if (player.hasKey === true) {
       k.go("finish")
     }
   })
 
-  k.onCollide("player", "flower", (player, flower) => {
-    flower.destroy()
-    player.hasFlower = true
+  k.onCollide("player", "key", (player, key) => {
+    key.destroy()
+    player.hasKey = true
   })
 })

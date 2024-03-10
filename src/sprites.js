@@ -41,7 +41,7 @@ export default function loadSprites() {
     grass: { x: 0, y: 0, width: TS, height: TS }, // Hier geben wir in Pixeln an, wo die Grafik für das Spielobjekt anfängt, und aufhört (oben-links bis unten-rechts).
     stone: { x: 1 * TS, y: 0, width: TS, height: TS }, // Wir verwenden hier TILESIZE, weil all unsere Grafiken im Moment genau 64x64 Pixel sind.
     mushroom: { x: 2 * TS, y: 0 * TS, width: TS, height: TS },
-    flower: { x: 3 * TS, y: 0 * TS, width: TS, height: TS },
+    key: { x: 3 * TS, y: 0 * TS, width: TS, height: TS },
     trunk: { x: 0 * TS, y: 1 * TS, width: TS, height: TS },
     tree: { x: 1 * TS, y: 1 * TS, width: TS, height: TS },
     cave: { x: 2 * TS, y: 1 * TS, width: TS, height: TS },
