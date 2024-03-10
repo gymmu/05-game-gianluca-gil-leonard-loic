@@ -22,14 +22,14 @@ export default function loadSprites() {
       sliceY: 8, // In der y-Richtung sind es 8 Kacheln, so wird es gleichmässig aufgeteilt.
       anims: {
         // Hier werden die verschiedenen Animationen definiert.
-        runDown: { from: 0, to: 1, loop: true, speed: 10 }, // Die Animation nach unten rennen, besteht aus den ersten 3 Kacheln. Die Animation soll sich wiederholen wenn sie durchlaufen ist.
-        idleDown: 8, // Ist es nur eine Kachel, kann diese direkt angegeben werden.
+        runDown: { from: 0, to: 3, loop: true, speed: 10 }, // Die Animation nach unten rennen, besteht aus den ersten 3 Kacheln. Die Animation soll sich wiederholen wenn sie durchlaufen ist.
+        idleDown: 1, // Ist es nur eine Kachel, kann diese direkt angegeben werden.
         runLeft: { from: 4, to: 7, loop: true, speed: 10 }, // Die Geschwindigkeit der Animation kann auch verändert werden.
         idleLeft: 5,
-        runRight: { from: 6, to: 7, loop: true, speed: 10 },
-        idleRight: 14,
-        runUp: { from: 2, to: 3, loop: true, speed: 10 },
-        idleUp: 10,
+        runRight: { from: 8, to: 11, loop: true, speed: 10 },
+        idleRight: 9,
+        runUp: { from: 12, to: 15, loop: true, speed: 10 },
+        idleUp: 13,
       },
     },
   })
