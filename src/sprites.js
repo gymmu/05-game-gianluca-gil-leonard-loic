@@ -16,20 +16,20 @@ export default function loadSprites() {
       // Alles war hier kommt, gehört zum Sprite `hero`
       x: 0, // x-Koordinate des Pixels wo das Sprite beginnt.
       y: 0, // y-Koordinate des Pixels wo das Sprite beginnt.
-      width: 512, // Die Breite des Sprites in Pixeln. Hier sind jeweils 3 Animationen nebeneinander, deshalb 3 * TILESIZE
-      height: 128, // Die Höhe des Sprites in Pixeln. Hier sind die 4 Laufrichtungen untereinander, deshalb 4 * TILESIZE
-      sliceX: 8, // In der x-Richtung sind es 3 Kacheln, so wird es gleichmässig aufgeteilt.
-      sliceY: 2, // In der y-Richtung sind es 4 Kacheln, so wird es gleichmässig aufgeteilt.
+      width: 256, // Die Breite des Sprites in Pixeln. Hier sind jeweils 4 Animationen nebeneinander, deshalb 3 * TILESIZE
+      height: 512, // Die Höhe des Sprites in Pixeln. Hier sind die 8 Laufrichtungen untereinander, deshalb 4 * TILESIZE
+      sliceX: 4, // In der x-Richtung sind es 4 Kacheln, so wird es gleichmässig aufgeteilt.
+      sliceY: 8, // In der y-Richtung sind es 8 Kacheln, so wird es gleichmässig aufgeteilt.
       anims: {
         // Hier werden die verschiedenen Animationen definiert.
-        runDown: { from: 0, to: 2, loop: true }, // Die Animation nach unten rennen, besteht aus den ersten 3 Kacheln. Die Animation soll sich wiederholen wenn sie durchlaufen ist.
+        runDown: { from: 0, to: 1, loop: true, speed: 10 }, // Die Animation nach unten rennen, besteht aus den ersten 3 Kacheln. Die Animation soll sich wiederholen wenn sie durchlaufen ist.
         idleDown: 8, // Ist es nur eine Kachel, kann diese direkt angegeben werden.
-        runLeft: { from: 3, to: 5, loop: true, speed: 10 }, // Die Geschwindigkeit der Animation kann auch verändert werden.
-        idleLeft: 12,
-        runRight: { from: 6, to: 8, loop: true, speed: 10 },
+        runLeft: { from: 4, to: 7, loop: true, speed: 10 }, // Die Geschwindigkeit der Animation kann auch verändert werden.
+        idleLeft: 5,
+        runRight: { from: 6, to: 7, loop: true, speed: 10 },
         idleRight: 14,
-        runUp: { from: 9, to: 11, loop: true, speed: 5 },
-        idleUp: 1,
+        runUp: { from: 2, to: 3, loop: true, speed: 10 },
+        idleUp: 10,
       },
     },
   })
