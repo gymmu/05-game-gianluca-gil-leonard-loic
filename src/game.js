@@ -34,8 +34,8 @@ export const k = kaboom({
   font: "sinko",
   background: [0, 0, 0],
   debug: true,
-  height: TILESIZE * 16,
-  width: TILESIZE * 30,
+  height: TILESIZE * 10,
+  width: TILESIZE * 20,
   canvas: document.getElementById("game-canvas"),
 })
 

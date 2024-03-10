@@ -6,4 +6,4 @@
  * Es ist wichtig diese Variablen zu verwenden, falls Sie zum Beispiel die
  * Kachelgrösse auf 64 ändern möchten, müssen Sie das nur hier machen.
  */
-export const TILESIZE = 32
+export const TILESIZE = 64

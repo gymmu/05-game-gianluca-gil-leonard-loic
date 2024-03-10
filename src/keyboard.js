@@ -48,43 +48,87 @@ export function loadKeyboardJumpAndRun() {
  */
 export function loadKeyboardRPG() {
   const player = getPlayer()
+
+  // Event handlers for left movement
   k.onKeyPress("left", () => {
     player.play("runLeft")
   })
   k.onKeyDown("left", () => {
-    player.move(k.LEFT.scale(player.speed))
+    if (!k.isKeyDown("up") && !k.isKeyDown("down")) {
+      player.move(k.LEFT.scale(player.speed))
+    }
   })
   k.onKeyRelease("left", () => {
-    player.play("idleLeft")
+    if (!k.isKeyDown("up") && !k.isKeyDown("down")) {
+      player.play("idleLeft")
+    }
   })
 
+  // Event handlers for right movement
   k.onKeyPress("right", () => {
     player.play("runRight")
   })
   k.onKeyDown("right", () => {
-    player.move(k.RIGHT.scale(player.speed))
+    if (!k.isKeyDown("up") && !k.isKeyDown("down")) {
+      player.move(k.RIGHT.scale(player.speed))
+    }
   })
   k.onKeyRelease("right", () => {
-    player.play("idleRight")
+    if (!k.isKeyDown("up") && !k.isKeyDown("down")) {
+      player.play("idleRight")
+    }
   })
 
+  // Event handlers for up movement
   k.onKeyPress("up", () => {
     player.play("runUp")
   })
   k.onKeyDown("up", () => {
-    player.move(k.UP.scale(player.speed))
+    if (!k.isKeyDown("left") && !k.isKeyDown("right")) {
+      player.move(k.UP.scale(player.speed))
+    }
   })
   k.onKeyRelease("up", () => {
-    player.play("idleUp")
+    if (!k.isKeyDown("left") && !k.isKeyDown("right")) {
+      player.play("idleUp")
+    }
   })
 
+  // Event handlers for down movement
   k.onKeyPress("down", () => {
     player.play("runDown")
   })
   k.onKeyDown("down", () => {
-    player.move(k.DOWN.scale(player.speed))
+    if (!k.isKeyDown("left") && !k.isKeyDown("right")) {
+      player.move(k.DOWN.scale(player.speed))
+    }
   })
   k.onKeyRelease("down", () => {
-    player.play("idleDown")
+    if (!k.isKeyDown("left") && !k.isKeyDown("right")) {
+      player.play("idleDown")
+    }
+  })
+
+  // Fix diagonal movement speed
+  const diagonalSpeedFactor = 1 / 1.414 // Approximately 0.707
+  k.onKeyDown("left", () => {
+    if (k.isKeyDown("up") || k.isKeyDown("down")) {
+      player.move(k.LEFT.scale(player.speed * diagonalSpeedFactor))
+    }
+  })
+  k.onKeyDown("right", () => {
+    if (k.isKeyDown("up") || k.isKeyDown("down")) {
+      player.move(k.RIGHT.scale(player.speed * diagonalSpeedFactor))
+    }
+  })
+  k.onKeyDown("up", () => {
+    if (k.isKeyDown("left") || k.isKeyDown("right")) {
+      player.move(k.UP.scale(player.speed * diagonalSpeedFactor))
+    }
+  })
+  k.onKeyDown("down", () => {
+    if (k.isKeyDown("left") || k.isKeyDown("right")) {
+      player.move(k.DOWN.scale(player.speed * diagonalSpeedFactor))
+    }
   })
 }
