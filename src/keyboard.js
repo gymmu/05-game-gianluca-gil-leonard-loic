@@ -110,7 +110,7 @@ export function loadKeyboardRPG() {
   })
 
   // Fix diagonal movement speed
-  const diagonalSpeedFactor = 1 / 1.41 // Approximately 0.707
+  const diagonalSpeedFactor = 1 / 1.414 // Approximately 0.707
   k.onKeyDown("left", () => {
     if (k.isKeyDown("up") || k.isKeyDown("down")) {
       player.move(k.LEFT.scale(player.speed * diagonalSpeedFactor))
