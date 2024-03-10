@@ -8,7 +8,7 @@
 - [ ] Präsentation für das Endprodukt in (`pres.html`) anpassen
 - [ ] Neues Spieler Sprite
 - [ ] Player Animationen
-- [ ] Jump and Run Level entfernen
+- [x] Jump and Run Level entfernen
 - [ ] Neue Spritesheets für Umgebung
 - [ ] Spritesheets für Gegner erstellen
 - [ ] Inventar hinzufügen
