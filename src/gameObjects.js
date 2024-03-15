@@ -28,7 +28,7 @@ export function door1RPG(x, y) {
   ])
 }
 
-export function sideWallRPG(x, y) {
+export function sideWallRightRPG(x, y) {
   k.add([
     k.sprite("sideWall"),
     k.pos(x * TILESIZE, y * TILESIZE),
@@ -37,15 +37,10 @@ export function sideWallRPG(x, y) {
   ])
 }
 
-/**
- *  Spielobjekt Stein.
- *
- * Soll den Spieler blockieren.
- */
-export function stoneRPG(x, y) {
+export function sideWallLeftRPG(x, y) {
   k.add([
-    k.sprite("stone"),
-    k.pos(x * TILESIZE, y * TILESIZE),
+    k.sprite("sideWall"),
+    k.pos(x * TILESIZE + 44, y * TILESIZE),
     k.body({ isStatic: true }),
     k.area(),
   ])

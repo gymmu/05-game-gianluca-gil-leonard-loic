@@ -30,9 +30,9 @@ export async function generateMapRPG(mapfile) {
     for (let x = 0; x < line.length; x++) {
       const char = line[x]
 
-      // Das wird bei jeder Kachel hinzugefügt, damit alles einen Hintergrund
-      // hat.
-      GameObjects.backgroundRPG(x, y)
+      if (char !== " " && char !== "\n" && char !== "s" && char !== "S") {
+        GameObjects.backgroundRPG(x, y)
+      }
 
       if (char === "p") {
         const player = getPlayer()
@@ -40,9 +40,9 @@ export async function generateMapRPG(mapfile) {
       } else if (char === "d") {
         GameObjects.door1RPG(x, y)
       } else if (char === "S") {
-        GameObjects.sideWallRPG(x, y)
+        GameObjects.sideWallRightRPG(x, y)
       } else if (char === "s") {
-        GameObjects.stoneRPG(x, y)
+        GameObjects.sideWallLeftRPG(x, y)
       } else if (char === "T") {
         GameObjects.trunkRPG(x, y)
       } else if (char === "t") {
