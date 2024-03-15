@@ -7,12 +7,24 @@ import { TILESIZE } from "./globals.js"
  */
 export function backgroundRPG(x, y) {
   k.add([
-    k.sprite("grass"),
+    k.sprite("floor"),
     k.pos(k.vec2(x, y).scale(TILESIZE)),
     // `z` wird hier verwendet um diese Kachel weiter im Hintergrund zu
     // zeichnen, damit das eigentliche Spielobjekt auf dem Feld nicht
     // überlagert wird.
     k.z(-10),
+  ])
+}
+/**
+ *  Ein Spielobjekt Höhle. Kann verwendet werden um ein neues Level zu betreten.
+ */
+export function door1RPG(x, y) {
+  k.add([
+    k.sprite("door1"),
+    k.pos(x * TILESIZE, y * TILESIZE),
+    k.body({ isStatic: true }),
+    k.area(),
+    "cave",
   ])
 }
 
@@ -27,33 +39,6 @@ export function stoneRPG(x, y) {
     k.pos(x * TILESIZE, y * TILESIZE),
     k.body({ isStatic: true }),
     k.area(),
-  ])
-}
-
-/**
- * Spielobjekt Wand.
- *
- * Der Spieler kann hier nicht durchlaufen. Kann als Klippe verwendet werden.
- */
-export function wallRPG(x, y) {
-  k.add([
-    k.sprite("wall"),
-    k.pos(x * TILESIZE, y * TILESIZE),
-    k.body({ isStatic: true }),
-    k.area(),
-  ])
-}
-
-/**
- *  Ein Spielobjekt Höhle. Kann verwendet werden um ein neues Level zu betreten.
- */
-export function caveRPG(x, y) {
-  k.add([
-    k.sprite("cave"),
-    k.pos(x * TILESIZE, y * TILESIZE),
-    k.body({ isStatic: true }),
-    k.area(),
-    "cave",
   ])
 }
 
@@ -109,5 +94,19 @@ export function mushroomRPG(x, y) {
     {
       isConsumable: true,
     },
+  ])
+}
+
+/**
+ * Spielobjekt Wand.
+ *
+ * Der Spieler kann hier nicht durchlaufen. Kann als Klippe verwendet werden.
+ */
+export function wallRPG(x, y) {
+  k.add([
+    k.sprite("wall"),
+    k.pos(x * TILESIZE, y * TILESIZE),
+    k.body({ isStatic: true }),
+    k.area(),
   ])
 }

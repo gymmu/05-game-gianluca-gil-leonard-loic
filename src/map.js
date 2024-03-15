@@ -37,20 +37,20 @@ export async function generateMapRPG(mapfile) {
       if (char === "p") {
         const player = getPlayer()
         player.pos = k.vec2(x, y).scale(TILESIZE)
+      } else if (char === "d") {
+        GameObjects.door1RPG(x, y)
       } else if (char === "s") {
         GameObjects.stoneRPG(x, y)
-      } else if (char === "w") {
-        GameObjects.wallRPG(x, y)
-      } else if (char === "c") {
-        GameObjects.caveRPG(x, y)
       } else if (char === "T") {
         GameObjects.trunkRPG(x, y)
       } else if (char === "t") {
         GameObjects.treeRPG(x, y)
-      } else if (char === "f") {
+      } else if (char === "k") {
         GameObjects.keyRPG(x, y)
       } else if (char === "m") {
         GameObjects.mushroomRPG(x, y)
+      } else if (char === "w") {
+        GameObjects.wallRPG(x, y)
       }
     }
   }
