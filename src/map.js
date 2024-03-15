@@ -35,7 +35,9 @@ export async function generateMapRPG(mapfile) {
         char !== "\n" &&
         char !== "s" &&
         char !== "S" &&
-        char !== "\r"
+        char !== "\r" &&
+        char !== "d" &&
+        char !== "J"
       ) {
         GameObjects.backgroundRPG(x, y)
       }
@@ -48,15 +50,11 @@ export async function generateMapRPG(mapfile) {
       } else if (char === "S") {
         GameObjects.sideWallRightRPG(x, y)
       } else if (char === "s") {
-        GameObjects.sideWallLeftRPG(x, y)
-      } else if (char === "T") {
-        GameObjects.trunkRPG(x, y)
-      } else if (char === "t") {
-        GameObjects.treeRPG(x, y)
+        GameObjects.sideWallRightRPG(x, y)
+      } else if (char === "J") {
+        GameObjects.sidePillarRPG(x, y)
       } else if (char === "k") {
         GameObjects.keyRPG(x, y)
-      } else if (char === "m") {
-        GameObjects.mushroomRPG(x, y)
       } else if (char === "w") {
         GameObjects.wallRPG(x, y)
       }

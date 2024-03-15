@@ -21,7 +21,7 @@ export function backgroundRPG(x, y) {
 export function door1RPG(x, y) {
   k.add([
     k.sprite("door1"),
-    k.pos(x * TILESIZE, y * TILESIZE),
+    k.pos(x * TILESIZE, y * TILESIZE + 9),
     k.body({ isStatic: true }),
     k.area(),
     "cave",
@@ -45,26 +45,9 @@ export function sideWallLeftRPG(x, y) {
     k.area(),
   ])
 }
-
-/*
- * Ein Baumstumpf als Spielobjekt. Wird als Hindernis für den Spieler
- * verwendet.
- */
-export function trunkRPG(x, y) {
+export function sidePillarRPG(x, y) {
   k.add([
-    k.sprite("trunk"),
-    k.pos(x * TILESIZE, y * TILESIZE),
-    k.body({ isStatic: true }),
-    k.area(),
-  ])
-}
-
-/**
- * Ein Spielobjekt Baum. Wird als Hindernis für den Spieler verwendet.
- */
-export function treeRPG(x, y) {
-  k.add([
-    k.sprite("tree"),
+    k.sprite("sidePillar"),
     k.pos(x * TILESIZE, y * TILESIZE),
     k.body({ isStatic: true }),
     k.area(),
@@ -80,21 +63,6 @@ export function keyRPG(x, y) {
     k.pos(x * TILESIZE, y * TILESIZE),
     k.area(),
     "key",
-    {
-      isConsumable: true,
-    },
-  ])
-}
-
-/**
- * Ein Spielobjekt Pilz, das dem Spieler schadet.
- */
-export function mushroomRPG(x, y) {
-  k.add([
-    k.sprite("mushroom"),
-    k.pos(x * TILESIZE, y * TILESIZE),
-    k.area(),
-    "obstacle",
     {
       isConsumable: true,
     },
