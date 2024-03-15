@@ -54,6 +54,7 @@ export function keyRPG(x, y) {
     k.sprite("key"),
     k.pos(x * TILESIZE, y * TILESIZE),
     k.area(),
+    k.scale(0.5),
     "key",
     {
       isConsumable: true,
