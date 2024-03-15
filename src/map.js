@@ -30,7 +30,13 @@ export async function generateMapRPG(mapfile) {
     for (let x = 0; x < line.length; x++) {
       const char = line[x]
 
-      if (char !== " " && char !== "\n" && char !== "s" && char !== "S") {
+      if (
+        char !== " " &&
+        char !== "\n" &&
+        char !== "s" &&
+        char !== "S" &&
+        char !== "\r"
+      ) {
         GameObjects.backgroundRPG(x, y)
       }
 
