@@ -50,84 +50,84 @@ export function loadKeyboardRPG() {
   const player = getPlayer()
 
   // Event handlers for left movement
-  k.onKeyPress("left", () => {
+  k.onKeyPress("a", () => {
     player.play("runLeft")
   })
-  k.onKeyDown("left", () => {
-    if (!k.isKeyDown("up") && !k.isKeyDown("down")) {
+  k.onKeyDown("a", () => {
+    if (!k.isKeyDown("w") && !k.isKeyDown("s")) {
       player.move(k.LEFT.scale(player.speed))
     }
   })
-  k.onKeyRelease("left", () => {
-    if (!k.isKeyDown("up") && !k.isKeyDown("down")) {
+  k.onKeyRelease("a", () => {
+    if (!k.isKeyDown("w") && !k.isKeyDown("s")) {
       player.play("idleLeft")
     }
   })
 
   // Event handlers for right movement
-  k.onKeyPress("right", () => {
+  k.onKeyPress("d", () => {
     player.play("runRight")
   })
-  k.onKeyDown("right", () => {
-    if (!k.isKeyDown("up") && !k.isKeyDown("down")) {
+  k.onKeyDown("d", () => {
+    if (!k.isKeyDown("w") && !k.isKeyDown("s")) {
       player.move(k.RIGHT.scale(player.speed))
     }
   })
-  k.onKeyRelease("right", () => {
-    if (!k.isKeyDown("up") && !k.isKeyDown("down")) {
+  k.onKeyRelease("d", () => {
+    if (!k.isKeyDown("w") && !k.isKeyDown("s")) {
       player.play("idleRight")
     }
   })
 
   // Event handlers for up movement
-  k.onKeyPress("up", () => {
+  k.onKeyPress("w", () => {
     player.play("runUp")
   })
-  k.onKeyDown("up", () => {
-    if (!k.isKeyDown("left") && !k.isKeyDown("right")) {
+  k.onKeyDown("w", () => {
+    if (!k.isKeyDown("a") && !k.isKeyDown("d")) {
       player.move(k.UP.scale(player.speed))
     }
   })
-  k.onKeyRelease("up", () => {
-    if (!k.isKeyDown("left") && !k.isKeyDown("right")) {
+  k.onKeyRelease("w", () => {
+    if (!k.isKeyDown("a") && !k.isKeyDown("d")) {
       player.play("idleUp")
     }
   })
 
   // Event handlers for down movement
-  k.onKeyPress("down", () => {
+  k.onKeyPress("s", () => {
     player.play("runDown")
   })
-  k.onKeyDown("down", () => {
-    if (!k.isKeyDown("left") && !k.isKeyDown("right")) {
+  k.onKeyDown("s", () => {
+    if (!k.isKeyDown("a") && !k.isKeyDown("d")) {
       player.move(k.DOWN.scale(player.speed))
     }
   })
-  k.onKeyRelease("down", () => {
-    if (!k.isKeyDown("left") && !k.isKeyDown("right")) {
+  k.onKeyRelease("s", () => {
+    if (!k.isKeyDown("a") && !k.isKeyDown("d")) {
       player.play("idleDown")
     }
   })
 
   // Fix diagonal movement speed
   const diagonalSpeedFactor = 1 / 1.414 // Approximately 0.707
-  k.onKeyDown("left", () => {
-    if (k.isKeyDown("up") || k.isKeyDown("down")) {
+  k.onKeyDown("a", () => {
+    if (k.isKeyDown("w") || k.isKeyDown("s")) {
       player.move(k.LEFT.scale(player.speed * diagonalSpeedFactor))
     }
   })
-  k.onKeyDown("right", () => {
-    if (k.isKeyDown("up") || k.isKeyDown("down")) {
+  k.onKeyDown("d", () => {
+    if (k.isKeyDown("w") || k.isKeyDown("s")) {
       player.move(k.RIGHT.scale(player.speed * diagonalSpeedFactor))
     }
   })
-  k.onKeyDown("up", () => {
-    if (k.isKeyDown("left") || k.isKeyDown("right")) {
+  k.onKeyDown("w", () => {
+    if (k.isKeyDown("a") || k.isKeyDown("d")) {
       player.move(k.UP.scale(player.speed * diagonalSpeedFactor))
     }
   })
-  k.onKeyDown("down", () => {
-    if (k.isKeyDown("left") || k.isKeyDown("right")) {
+  k.onKeyDown("s", () => {
+    if (k.isKeyDown("a") || k.isKeyDown("d")) {
       player.move(k.DOWN.scale(player.speed * diagonalSpeedFactor))
     }
   })

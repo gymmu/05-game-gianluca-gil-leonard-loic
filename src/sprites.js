@@ -49,8 +49,8 @@ export default function loadSprites() {
   k.loadSpriteAtlas("sprites/SidePillar.png", {
     sidePillar: { x: 0, y: 0, width: 21, height: 64 },
   })
-  k.loadSpriteAtlas("sprites/ground.png", {
-    key: { x: 3 * TS, y: 0 * TS, width: TS, height: TS },
+  k.loadSpriteAtlas("sprites/key.png", {
+    key: { x: 0, y: 0, width: TS, height: TS },
   })
   k.loadSpriteAtlas("sprites/BackWall.png", {
     wall: { x: 0, y: 0, width: TS, height: TS },
