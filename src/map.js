@@ -37,7 +37,8 @@ export async function generateMapRPG(mapfile) {
         char !== "S" &&
         char !== "\r" &&
         char !== "d" &&
-        char !== "J"
+        char !== "J" &&
+        char !== "j"
       ) {
         GameObjects.backgroundRPG(x, y)
       }
@@ -48,11 +49,13 @@ export async function generateMapRPG(mapfile) {
       } else if (char === "d") {
         GameObjects.door1RPG(x, y)
       } else if (char === "S") {
-        GameObjects.sideWallRightRPG(x, y)
+        GameObjects.sideWallRPG(x, y)
       } else if (char === "s") {
-        GameObjects.sideWallRightRPG(x, y)
+        GameObjects.sideWallRPG(x, y, 44)
       } else if (char === "J") {
         GameObjects.sidePillarRPG(x, y)
+      } else if (char === "j") {
+        GameObjects.sidePillarRPG(x, y, 44)
       } else if (char === "k") {
         GameObjects.keyRPG(x, y)
       } else if (char === "w") {

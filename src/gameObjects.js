@@ -28,27 +28,19 @@ export function door1RPG(x, y) {
   ])
 }
 
-export function sideWallRightRPG(x, y) {
+export function sideWallRPG(x, y, shiftRight = 0) {
   k.add([
     k.sprite("sideWall"),
-    k.pos(x * TILESIZE, y * TILESIZE),
+    k.pos(x * TILESIZE + shiftRight, y * TILESIZE),
     k.body({ isStatic: true }),
     k.area(),
   ])
 }
 
-export function sideWallLeftRPG(x, y) {
-  k.add([
-    k.sprite("sideWall"),
-    k.pos(x * TILESIZE + 44, y * TILESIZE),
-    k.body({ isStatic: true }),
-    k.area(),
-  ])
-}
-export function sidePillarRPG(x, y) {
+export function sidePillarRPG(x, y, shiftRight = 0) {
   k.add([
     k.sprite("sidePillar"),
-    k.pos(x * TILESIZE, y * TILESIZE),
+    k.pos(x * TILESIZE + shiftRight, y * TILESIZE),
     k.body({ isStatic: true }),
     k.area(),
   ])
