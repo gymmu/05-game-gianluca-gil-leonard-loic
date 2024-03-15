@@ -7,7 +7,7 @@ import { TILESIZE } from "./globals.js"
  */
 export function backgroundRPG(x, y) {
   k.add([
-    k.sprite("grass"),
+    k.sprite("floor"),
     k.pos(k.vec2(x, y).scale(TILESIZE)),
     // `z` wird hier verwendet um diese Kachel weiter im Hintergrund zu
     // zeichnen, damit das eigentliche Spielobjekt auf dem Feld nicht
@@ -15,68 +15,32 @@ export function backgroundRPG(x, y) {
     k.z(-10),
   ])
 }
-
-/**
- *  Spielobjekt Stein.
- *
- * Soll den Spieler blockieren.
- */
-export function stoneRPG(x, y) {
-  k.add([
-    k.sprite("stone"),
-    k.pos(x * TILESIZE, y * TILESIZE),
-    k.body({ isStatic: true }),
-    k.area(),
-  ])
-}
-
-/**
- * Spielobjekt Wand.
- *
- * Der Spieler kann hier nicht durchlaufen. Kann als Klippe verwendet werden.
- */
-export function wallRPG(x, y) {
-  k.add([
-    k.sprite("wall"),
-    k.pos(x * TILESIZE, y * TILESIZE),
-    k.body({ isStatic: true }),
-    k.area(),
-  ])
-}
-
 /**
  *  Ein Spielobjekt Höhle. Kann verwendet werden um ein neues Level zu betreten.
  */
-export function caveRPG(x, y) {
+export function door1RPG(x, y) {
   k.add([
-    k.sprite("cave"),
-    k.pos(x * TILESIZE, y * TILESIZE),
+    k.sprite("door1"),
+    k.pos(x * TILESIZE, y * TILESIZE + 9),
     k.body({ isStatic: true }),
     k.area(),
     "cave",
   ])
 }
 
-/*
- * Ein Baumstumpf als Spielobjekt. Wird als Hindernis für den Spieler
- * verwendet.
- */
-export function trunkRPG(x, y) {
+export function sideWallRPG(x, y, shiftRight = 0) {
   k.add([
-    k.sprite("trunk"),
-    k.pos(x * TILESIZE, y * TILESIZE),
+    k.sprite("sideWall"),
+    k.pos(x * TILESIZE + shiftRight, y * TILESIZE),
     k.body({ isStatic: true }),
     k.area(),
   ])
 }
 
-/**
- * Ein Spielobjekt Baum. Wird als Hindernis für den Spieler verwendet.
- */
-export function treeRPG(x, y) {
+export function sidePillarRPG(x, y, shiftRight = 0) {
   k.add([
-    k.sprite("tree"),
-    k.pos(x * TILESIZE, y * TILESIZE),
+    k.sprite("sidePillar"),
+    k.pos(x * TILESIZE + shiftRight, y * TILESIZE),
     k.body({ isStatic: true }),
     k.area(),
   ])
@@ -98,16 +62,15 @@ export function keyRPG(x, y) {
 }
 
 /**
- * Ein Spielobjekt Pilz, das dem Spieler schadet.
+ * Spielobjekt Wand.
+ *
+ * Der Spieler kann hier nicht durchlaufen. Kann als Klippe verwendet werden.
  */
-export function mushroomRPG(x, y) {
+export function wallRPG(x, y) {
   k.add([
-    k.sprite("mushroom"),
+    k.sprite("wall"),
     k.pos(x * TILESIZE, y * TILESIZE),
+    k.body({ isStatic: true }),
     k.area(),
-    "obstacle",
-    {
-      isConsumable: true,
-    },
   ])
 }

@@ -6,10 +6,10 @@
 - [ ] Name des Spiels ändern
 - [ ] Spielidee auf der Webseite beschreiben (kann später noch erweitert werden)
 - [ ] Präsentation für das Endprodukt in (`pres.html`) anpassen
-- [ ] Neues Spieler Sprite
-- [ ] Player Animationen
+- [x] Neues Spieler Sprite
+- [x] Player Animationen
 - [x] Jump and Run Level entfernen
-- [ ] Neue Spritesheets für Umgebung
+- [x] Neue Spritesheets für Umgebung
 - [ ] Spritesheets für Gegner erstellen
 - [ ] Inventar hinzufügen
 - [ ] Icons für Gegenstände erstellen

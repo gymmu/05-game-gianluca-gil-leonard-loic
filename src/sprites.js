@@ -37,14 +37,22 @@ export default function loadSprites() {
   /**
    * Hier werden alle sprites für die statischen Spielobjekte geladen.
    */
+  k.loadSpriteAtlas("sprites/Floor.png", {
+    floor: { x: 0, y: 0, width: TS, height: TS },
+  })
+  k.loadSpriteAtlas("sprites/Door1.png", {
+    door1: { x: 0, y: 0, width: TS, height: TS },
+  })
+  k.loadSpriteAtlas("sprites/SideWall.png", {
+    sideWall: { x: 0, y: 0, width: 21, height: 64 },
+  })
+  k.loadSpriteAtlas("sprites/SidePillar.png", {
+    sidePillar: { x: 0, y: 0, width: 21, height: 64 },
+  })
   k.loadSpriteAtlas("sprites/ground.png", {
-    grass: { x: 0, y: 0, width: TS, height: TS }, // Hier geben wir in Pixeln an, wo die Grafik für das Spielobjekt anfängt, und aufhört (oben-links bis unten-rechts).
-    stone: { x: 1 * TS, y: 0, width: TS, height: TS }, // Wir verwenden hier TILESIZE, weil all unsere Grafiken im Moment genau 64x64 Pixel sind.
-    mushroom: { x: 2 * TS, y: 0 * TS, width: TS, height: TS },
     key: { x: 3 * TS, y: 0 * TS, width: TS, height: TS },
-    trunk: { x: 0 * TS, y: 1 * TS, width: TS, height: TS },
-    tree: { x: 1 * TS, y: 1 * TS, width: TS, height: TS },
-    cave: { x: 2 * TS, y: 1 * TS, width: TS, height: TS },
-    wall: { x: 3 * TS, y: 1 * TS, width: TS, height: TS },
+  })
+  k.loadSpriteAtlas("sprites/BackWall.png", {
+    wall: { x: 0, y: 0, width: TS, height: TS },
   })
 }

@@ -30,27 +30,36 @@ export async function generateMapRPG(mapfile) {
     for (let x = 0; x < line.length; x++) {
       const char = line[x]
 
-      // Das wird bei jeder Kachel hinzugefügt, damit alles einen Hintergrund
-      // hat.
-      GameObjects.backgroundRPG(x, y)
+      if (
+        char !== " " &&
+        char !== "\n" &&
+        char !== "s" &&
+        char !== "S" &&
+        char !== "\r" &&
+        char !== "d" &&
+        char !== "J" &&
+        char !== "j"
+      ) {
+        GameObjects.backgroundRPG(x, y)
+      }
 
       if (char === "p") {
         const player = getPlayer()
         player.pos = k.vec2(x, y).scale(TILESIZE)
+      } else if (char === "d") {
+        GameObjects.door1RPG(x, y)
+      } else if (char === "S") {
+        GameObjects.sideWallRPG(x, y)
       } else if (char === "s") {
-        GameObjects.stoneRPG(x, y)
+        GameObjects.sideWallRPG(x, y, 44)
+      } else if (char === "J") {
+        GameObjects.sidePillarRPG(x, y)
+      } else if (char === "j") {
+        GameObjects.sidePillarRPG(x, y, 44)
+      } else if (char === "k") {
+        GameObjects.keyRPG(x, y)
       } else if (char === "w") {
         GameObjects.wallRPG(x, y)
-      } else if (char === "c") {
-        GameObjects.caveRPG(x, y)
-      } else if (char === "T") {
-        GameObjects.trunkRPG(x, y)
-      } else if (char === "t") {
-        GameObjects.treeRPG(x, y)
-      } else if (char === "f") {
-        GameObjects.keyRPG(x, y)
-      } else if (char === "m") {
-        GameObjects.mushroomRPG(x, y)
       }
     }
   }
