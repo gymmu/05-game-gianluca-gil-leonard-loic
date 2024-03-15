@@ -39,6 +39,8 @@ export async function generateMapRPG(mapfile) {
         player.pos = k.vec2(x, y).scale(TILESIZE)
       } else if (char === "d") {
         GameObjects.door1RPG(x, y)
+      } else if (char === "S") {
+        GameObjects.sideWallRPG(x, y)
       } else if (char === "s") {
         GameObjects.stoneRPG(x, y)
       } else if (char === "T") {

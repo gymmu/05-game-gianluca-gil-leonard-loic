@@ -28,6 +28,15 @@ export function door1RPG(x, y) {
   ])
 }
 
+export function sideWallRPG(x, y) {
+  k.add([
+    k.sprite("sideWall"),
+    k.pos(x * TILESIZE, y * TILESIZE),
+    k.body({ isStatic: true }),
+    k.area(),
+  ])
+}
+
 /**
  *  Spielobjekt Stein.
  *
