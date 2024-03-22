@@ -132,7 +132,6 @@ export function loadKeyboardRPG() {
       player.move(k.DOWN.scale(player.speed * diagonalSpeedFactor))
     }
   })
-
   k.onMousePress("left", () => {
     createTrail()
   })

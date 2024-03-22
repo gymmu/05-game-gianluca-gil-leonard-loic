@@ -1,5 +1,4 @@
 import { k, addGeneralGameLogic } from "../game.js"
-import createPlayer from "../player.js"
 import { generateMapRPG } from "../map.js"
 import { loadKeyboardRPG } from "../keyboard.js"
 
