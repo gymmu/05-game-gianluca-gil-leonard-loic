@@ -14,6 +14,7 @@ export default function createTrail() {
     k.sprite("trail", { anim: "move" }),
     k.pos(),
     k.area(),
+    k.offscreen({ destroy: true }),
 
     "spell",
 
@@ -33,7 +34,6 @@ export default function createTrail() {
       trail.destroy()
     },
   )
-
   // Wenn das Spielobjekt nach 10 Sekunden nicht zerstört wurde, soll es
   // auch zerstört werden.
   k.wait(10, () => {
