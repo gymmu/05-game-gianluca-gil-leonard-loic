@@ -13,6 +13,7 @@ export function backgroundRPG(x, y) {
     // zeichnen, damit das eigentliche Spielobjekt auf dem Feld nicht
     // überlagert wird.
     k.z(-10),
+    k.offscreen({ hide: true }),
   ])
 }
 /**
