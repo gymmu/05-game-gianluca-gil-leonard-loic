@@ -34,12 +34,25 @@ export default function loadSprites() {
     },
   })
 
-  /**
-   * Hier werden alle sprites für die statischen Spielobjekte geladen.
-   */
-  k.loadSpriteAtlas("sprites/Floor.png", {
-    floor: { x: 0, y: 0, width: TS, height: TS },
-  })
+  k.loadSpriteAtlas("sprites/trail.png", {
+    trail: {
+      x: 0,
+      y: 0,
+      width: 384,
+      height: 128,
+      sliceX: 6,
+      sliceY: 2,
+      anims: {
+        move: { from: 0, to: 5, loop: true, speed: 10 },
+      },
+    },
+  }),
+    /**
+     * Hier werden alle sprites für die statischen Spielobjekte geladen.
+     */
+    k.loadSpriteAtlas("sprites/Floor.png", {
+      floor: { x: 0, y: 0, width: TS, height: TS },
+    })
   k.loadSpriteAtlas("sprites/Door1.png", {
     door1: { x: 0, y: 0, width: TS, height: TS },
   })
