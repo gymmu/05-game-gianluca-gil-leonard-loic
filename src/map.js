@@ -2,6 +2,7 @@ import { k } from "./game.js"
 import { TILESIZE } from "./globals.js"
 import { getPlayer } from "./player.js"
 import * as GameObjects from "./gameObjects.js"
+import { createJackSparrow } from "./jacksparrow.js"
 
 /**
  *  Diese Funktion liest eine txt-Datei ein, und erstellt aufgrund der Struktur
@@ -46,6 +47,9 @@ export async function generateMapRPG(mapfile) {
       if (char === "p") {
         const player = getPlayer()
         player.pos = k.vec2(x, y).scale(TILESIZE)
+      } else if (char === "c") {
+        const jacksparrow = createJackSparrow(x, y)
+        jacksparrow.pos = k.vec2(x, y).scale(TILESIZE)
       } else if (char === "d") {
         GameObjects.door1RPG(x, y)
       } else if (char === "S") {

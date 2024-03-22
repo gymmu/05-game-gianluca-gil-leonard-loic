@@ -34,6 +34,21 @@ export default function loadSprites() {
     },
   })
 
+  k.loadSpriteAtlas("sprites/jacksparrow.png", {
+    jacksparrow: {
+      x: 0,
+      y: 0,
+      width: 56,
+      height: 64,
+      sliceX: 2,
+      sliceY: 1,
+      anims: {
+        idle1: 0,
+        idle2: 1,
+      },
+    },
+  })
+
   k.loadSpriteAtlas("sprites/trail.png", {
     trail: {
       x: 0,
@@ -50,9 +65,12 @@ export default function loadSprites() {
     /**
      * Hier werden alle sprites für die statischen Spielobjekte geladen.
      */
-    k.loadSpriteAtlas("sprites/Floor.png", {
-      floor: { x: 0, y: 0, width: TS, height: TS },
+    k.loadSpriteAtlas("sprites/background.png", {
+      background: { x: 0, y: 0, width: 1024, height: 576 },
     })
+  k.loadSpriteAtlas("sprites/Floor.png", {
+    floor: { x: 0, y: 0, width: TS, height: TS },
+  })
   k.loadSpriteAtlas("sprites/Door1.png", {
     door1: { x: 0, y: 0, width: TS, height: TS },
   })
