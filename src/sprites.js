@@ -68,4 +68,10 @@ export default function loadSprites() {
   k.loadSpriteAtlas("sprites/BackWall.png", {
     wall: { x: 0, y: 0, width: TS, height: TS },
   })
+  k.loadSpriteAtlas("sprites/cornerRight.png", {
+    cornerRight: { x: 0, y: 0, width: TS, height: TS },
+  })
+  k.loadSpriteAtlas("sprites/cornerLeft.png", {
+    cornerLeft: { x: 0, y: 0, width: TS, height: TS },
+  })
 }

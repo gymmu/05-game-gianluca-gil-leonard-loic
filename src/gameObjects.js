@@ -75,3 +75,21 @@ export function wallRPG(x, y) {
     k.area(),
   ])
 }
+
+export function cornerRightRPG(x, y) {
+  k.add([
+    k.sprite("cornerRight"),
+    k.pos(x * TILESIZE, y * TILESIZE),
+    k.body({ isStatic: true }),
+    k.area(),
+  ])
+}
+
+export function cornerLeftRPG(x, y) {
+  k.add([
+    k.sprite("cornerLeft"),
+    k.pos(x * TILESIZE, y * TILESIZE),
+    k.body({ isStatic: true }),
+    k.area(),
+  ])
+}

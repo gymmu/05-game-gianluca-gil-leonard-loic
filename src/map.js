@@ -60,6 +60,10 @@ export async function generateMapRPG(mapfile) {
         GameObjects.keyRPG(x, y)
       } else if (char === "w") {
         GameObjects.wallRPG(x, y)
+      } else if (char === "e") {
+        GameObjects.cornerRightRPG(x, y)
+      } else if (char === "q") {
+        GameObjects.cornerLeftRPG(x, y)
       }
     }
   }
