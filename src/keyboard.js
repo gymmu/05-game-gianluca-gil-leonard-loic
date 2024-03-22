@@ -1,6 +1,7 @@
 import { k } from "./game.js"
 import { getPlayer } from "./player.js"
 import createTrail, { getTrail } from "./attack.js"
+import { DEBUG } from "./globals.js"
 
 /**
  * Diese Funktion lädt die Tastenbelegung wie sie pro Level sein soll. Die
@@ -135,16 +136,18 @@ export function loadKeyboardRPG() {
   k.onMousePress("left", () => {
     createTrail()
   })
-  k.onKeyPress("1", () => {
-    k.go("level-01")
-  })
-  k.onKeyPress("2", () => {
-    k.go("level-02")
-  })
-  k.onKeyPress("up", () => {
-    player.speed *= 1.5
-  })
-  k.onKeyPress("down", () => {
-    player.speed /= 1.5
-  })
+  if (DEBUG) {
+    k.onKeyPress("1", () => {
+      k.go("level-01")
+    })
+    k.onKeyPress("2", () => {
+      k.go("level-02")
+    })
+    k.onKeyPress("up", () => {
+      player.speed *= 1.5
+    })
+    k.onKeyPress("down", () => {
+      player.speed /= 1.5
+    })
+  }
 }
