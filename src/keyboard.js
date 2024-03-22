@@ -1,5 +1,6 @@
 import { k } from "./game.js"
 import { getPlayer } from "./player.js"
+import createTrail, { getTrail } from "./attack.js"
 
 /**
  * Diese Funktion lädt die Tastenbelegung wie sie pro Level sein soll. Die
@@ -130,5 +131,9 @@ export function loadKeyboardRPG() {
     if (k.isKeyDown("a") || k.isKeyDown("d")) {
       player.move(k.DOWN.scale(player.speed * diagonalSpeedFactor))
     }
+  })
+
+  k.onMousePress("left", () => {
+    createTrail()
   })
 }

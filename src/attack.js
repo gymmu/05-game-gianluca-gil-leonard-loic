@@ -12,8 +12,7 @@ import { k } from "./game.js"
 export default function createTrail() {
   const trail = k.add([
     k.sprite("trail", { anim: "move" }),
-    k.pos(0, 0),
-    k.body(),
+    k.pos(),
     k.area(),
 
     "spell",
@@ -26,11 +25,25 @@ export default function createTrail() {
       dead: false,
     },
   ])
+
+  // Wenn das Spielobjekt mit etwas kollidiert, soll es zerstört werden.
+  trail.onCollide(
+    (obj) => obj.isNot("player"),
+    () => {
+      trail.destroy()
+    },
+  )
+
+  // Wenn das Spielobjekt nach 10 Sekunden nicht zerstört wurde, soll es
+  // auch zerstört werden.
+  k.wait(10, () => {
+    trail.destroy()
+  })
 }
 
 /**
  *  Hilfsfunktion um das Spielobjekt von `player` einfach zu bekommen.
  */
 export function getTrail() {
-  return k.get("trail")[0]
+  return k.get("spell")[0]
 }
