@@ -136,4 +136,10 @@ export function loadKeyboardRPG() {
   k.onMousePress("left", () => {
     createTrail()
   })
+  k.onKeyPress("1", () => {
+    k.go("level-01")
+  })
+  k.onKeyPress("2", () => {
+    k.go("level-02")
+  })
 }
