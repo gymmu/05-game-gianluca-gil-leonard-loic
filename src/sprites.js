@@ -34,21 +34,6 @@ export default function loadSprites() {
     },
   })
 
-  k.loadSpriteAtlas("sprites/jacksparrow.png", {
-    jacksparrow: {
-      x: 0,
-      y: 0,
-      width: 56,
-      height: 64,
-      sliceX: 2,
-      sliceY: 1,
-      anims: {
-        idle1: 0,
-        idle2: 1,
-      },
-    },
-  })
-
   k.loadSpriteAtlas("sprites/trail.png", {
     trail: {
       x: 0,

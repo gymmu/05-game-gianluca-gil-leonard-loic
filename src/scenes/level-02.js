@@ -15,9 +15,16 @@ k.scene("level-02", async () => {
 
   await generateMapRPG("maps/level-02.txt")
 
+  k.add([
+    k.sprite("background", { width: k.width(), height: k.height() }),
+    k.pos(0, 0),
+    k.z(-100),
+    k.fixed(),
+  ])
+
   addGeneralGameLogic()
 
-  k.onCollide("player", "cave", (player) => {
+  k.onCollide("player", "door", (player) => {
     if (player.hasKey === true) {
       k.go("finish")
     }
