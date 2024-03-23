@@ -3,7 +3,7 @@ import { TILESIZE } from "./globals.js"
 
 export function JackSparrow(x, y) {
   k.add([
-    k.sprite("jacksparrow"),
+    k.sprite("jacksparrow", { anim: "idle" }),
     k.pos(x * TILESIZE + 16, y * TILESIZE),
     k.body({ isStatic: true }),
     k.area(),

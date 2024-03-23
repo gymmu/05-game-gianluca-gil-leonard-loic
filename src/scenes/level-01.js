@@ -29,22 +29,22 @@ k.scene("level-01", async () => {
     key.destroy()
     player.hasKey = true
   })
-
   k.onCollide("player", "npc", (player, jacksparrow) => {
-    k.add([
+    let boxBack = k.add([
       k.pos(jacksparrow.pos.add(64, -56)),
-      k.rect(420, 100),
+      k.rect(420, 110),
       k.color(207, 185, 151),
       k.anchor("center"),
       k.outline(5, rgb(160, 140, 100)),
     ])
-    k.add([
+
+    let text1 = k.add([
       k.text(
-        "Denn ohne diesen Schlüssel, können wir nicht aufschliessen, was wir nicht haben, das er aufschliesst. Also was für einen Sinn würde es machen, das zu finden was er aufschliesst, was wir nicht haben, ohne zuerst den Schlüssel gefunden zu haben, der es aufschliesst?",
+        "Suche in jedem Level stehts nach dem Schlüssel.\nDenn ohne diesen Schlüssel, können wir nicht aufschliessen, was wir nicht haben, das er aufschliesst. Also was für einen Sinn würde es machen, das zu finden was er aufschliesst, was wir nicht haben, ohne zuerst den Schlüssel gefunden zu haben, der es aufschliesst?",
         {
-          size: 16,
+          size: 17,
           width: 400,
-          height: 200,
+          height: 240,
           textAlign: "center",
           lineHeight: 1.2,
         },
@@ -53,5 +53,9 @@ k.scene("level-01", async () => {
       k.anchor("center"),
       k.color(0, 0, 0),
     ])
+    k.onCollideEnd("player", "npc", (player, jacksparrow) => {
+      text1.destroy()
+      boxBack.destroy()
+    })
   })
 })

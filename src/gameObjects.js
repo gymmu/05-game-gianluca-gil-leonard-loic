@@ -52,7 +52,7 @@ export function sidePillarRPG(x, y, shiftRight = 0) {
 export function keyRPG(x, y) {
   k.add([
     k.sprite("key"),
-    k.pos(x * TILESIZE + 16, y * TILESIZE - 16),
+    k.pos(x * TILESIZE + 16, y * TILESIZE + 16),
     k.area(),
     k.scale(0.5),
     "key",
