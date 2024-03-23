@@ -4,6 +4,7 @@ import { generateMapRPG } from "../map.js"
 import { loadKeyboardRPG } from "../keyboard.js"
 
 import "./level-02.js"
+import { JackSparrow } from "../jacksparrow.js"
 
 /**
  * Szene für das Level 2.
@@ -12,7 +13,6 @@ import "./level-02.js"
  */
 k.scene("level-01", async () => {
   k.setGravity(0)
-  createPlayer()
   loadKeyboardRPG()
 
   await generateMapRPG("maps/level-01.txt")
@@ -28,5 +28,30 @@ k.scene("level-01", async () => {
   k.onCollide("player", "key", (player, key) => {
     key.destroy()
     player.hasKey = true
+  })
+
+  k.onCollide("player", "npc", (player, jacksparrow) => {
+    k.add([
+      k.pos(jacksparrow.pos.add(64, -56)),
+      k.rect(420, 100),
+      k.color(207, 185, 151),
+      k.anchor("center"),
+      k.outline(5, rgb(160, 140, 100)),
+    ])
+    k.add([
+      k.text(
+        "Denn ohne diesen Schlüssel, können wir nicht aufschliessen, was wir nicht haben, das er aufschliesst. Also was für einen Sinn würde es machen, das zu finden was er aufschliesst, was wir nicht haben, ohne zuerst den Schlüssel gefunden zu haben, der es aufschliesst?",
+        {
+          size: 16,
+          width: 400,
+          height: 200,
+          textAlign: "center",
+          lineHeight: 1.2,
+        },
+      ),
+      k.pos(jacksparrow.pos.add(64, -56)),
+      k.anchor("center"),
+      k.color(0, 0, 0),
+    ])
   })
 })

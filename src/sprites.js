@@ -46,13 +46,13 @@ export default function loadSprites() {
         move: { from: 0, to: 5, loop: true, speed: 10 },
       },
     },
-  }),
-    /**
-     * Hier werden alle sprites für die statischen Spielobjekte geladen.
-     */
-    k.loadSpriteAtlas("sprites/background.png", {
-      background: { x: 0, y: 0, width: 1024, height: 576 },
-    })
+  })
+  /**
+   * Hier werden alle sprites für die statischen Spielobjekte geladen.
+   */
+  k.loadSpriteAtlas("sprites/background.png", {
+    background: { x: 0, y: 0, width: 1024, height: 576 },
+  })
   k.loadSpriteAtlas("sprites/Floor.png", {
     floor: { x: 0, y: 0, width: TS, height: TS },
   })
@@ -76,5 +76,20 @@ export default function loadSprites() {
   })
   k.loadSpriteAtlas("sprites/cornerLeft.png", {
     cornerLeft: { x: 0, y: 0, width: TS, height: TS },
+  })
+
+  k.loadSpriteAtlas("sprites/jacksparrow.png", {
+    jacksparrow: {
+      x: 0,
+      y: 0,
+      width: 56,
+      height: 64,
+      sliceX: 2,
+      sliceY: 1,
+      anims: {
+        idle1: 0,
+        idle2: 1,
+      },
+    },
   })
 }

@@ -1,18 +1,17 @@
-import { TILESIZE } from "./globals.js"
 import { k } from "./game.js"
+import { TILESIZE } from "./globals.js"
 
-export function createJackSparrow() {
-  const jacksparrow = k.add([
-    k.sprite("jacksparrow", { anim: "idle1" }),
-    k.pos(x * TILESIZE, y * TILESIZE),
+export function JackSparrow(x, y) {
+  k.add([
+    k.sprite("jacksparrow"),
+    k.pos(x * TILESIZE + 16, y * TILESIZE),
+    k.body({ isStatic: true }),
     k.area(),
-    k.body(),
-
+    k.scale(1.6),
     "npc",
   ])
-  //
-  //  jacksparrow.onCollide(
-  //    (obj) => obj.isNot("player"),
-  //    () => {},
-  //  )
+}
+
+export function getJackSparrow() {
+  return k.get("jacksparrow")[0]
 }

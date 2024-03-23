@@ -2,6 +2,7 @@ import { k } from "./game.js"
 import { TILESIZE } from "./globals.js"
 import { getPlayer } from "./player.js"
 import * as GameObjects from "./gameObjects.js"
+import * as NPC from "./jacksparrow.js"
 
 /**
  *  Diese Funktion liest eine txt-Datei ein, und erstellt aufgrund der Struktur
@@ -64,6 +65,8 @@ export async function generateMapRPG(mapfile) {
         GameObjects.cornerRightRPG(x, y)
       } else if (char === "q") {
         GameObjects.cornerLeftRPG(x, y)
+      } else if (char === "c") {
+        NPC.JackSparrow(x, y)
       }
     }
   }
