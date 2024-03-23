@@ -4,32 +4,32 @@ s..............S          s...............S
 s......p.......S          s...............S 
 s..............S          s...............S                                                 swwwwwwwwwwwwwwwwwwwwwwwwS
 s..............wwwwwwwwwwww...............wwwwwwwwwwwwwwwwwS                                s........................S 
-s..........................................................S                                s........................SwwwwwwwwwwwwwwwwS
+s..........................................................S                                s........................wwwwwwwwwwwwwwwwwS
 s..........................................................S                                s.........................................S
 s..........................................................S                                s.........................................S
-jwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwew.wq                                s.........................................S
-                                                       s...S                                s........................Swwwwwwwwwwwwq...S
+jwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwqw.wS                                s.........................................S
+                                                       s...S                                s........................ewwwwwwwwwwwwq...S
                                                        s...S                                s........................S            s...S  
                                                        s...S                                jwwwwwwwwwwwwwwwwwwwwwwwwJ            s...S 
                                                        s...S                                                                      s...S         
                                                        s...S                                                                      s...S         
                                                        s...S                                                                      s...S                                                                       s...S
-swwwwwwwwwwS           swwwwwwwwwS               swwwwwq...ewwwwwS                                                                s...S 
+swwwwwwwwwwS           swwwwwwwwwS               swwwwww...wwwwwwS                                                                s...S 
 s..........S           s.........S               s...............S               swwwwwwwwwwwwwwwwwwwwwS                          s...S 
 s..........S           s.........S               s...............S               s.....................S                          s...S  
-s..........qwwwwwwwwwwwe.........S               s...............S               s.....................S                          s...S 
+s..........wwwwwwwwwwwww.........S               s...............S               s.....................S                          s...S 
 s................................S               s...ewwwwwwwq...S               s...ewwwwwwwwwwwwwq...S           swwwwwwwwwS    s...S 
 s................................S               s...S       s...S               s...S             s...S           s.........S    s...S
 s................................S               s...S       s...S               s...S             s...S           s.........S    s...S 
-s...ewwwwwwwwwwwwwwwwwwwwwwwwwwwwJ               s...S       s...qwwwwwwwwwwwwwwwe...S             s...qwwwwwwwwwwws.........S    s...S 
+s...ewwwwwwwwwwwwwwwwwwwwwwwwwwwwJ               s...S       s...wwwwwwwwwwwwwwwww...S             s...wwwwwwwwwwwww.........S    s...S 
 s...S                                            s...S       s.......................S             s.........................S    s...S  
 s...S                                            s...S       s.......................S             s.........................S    s...S      
 s...S                                            s...S       s.......................S             s.........................S    s...S 
-s...qwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwe...S       swwwwwwwwwwwwwwwwwwwq...S             s...ewwwwwwwwwwwwwwwwwwwwwJ    s...S 
+s...wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww...S       jwwwwwwwwwwwwwwwwwwwq...S             s...ewwwwwwwwwwwwwwwwwwwwwJ    s...S 
 s....................................................S                           s...S             s...S                          s...S 
 s....................................................S                           s...S             s...S                          s...S 
 s....................................................S                           s...S             s...S                          s...S 
-s...qwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwJ                           s...S             s...qwwwwwwwwwwwwwwwwwwwwwwwwwwe...S 
+s...ewwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwJ                           s...S             s...wwwwwwwwwwwwwwwwwwwwwwwwwwww...S 
 s...S                                                                            s...S             s..................................S 
 s...S                                                                            s...S             s..................................S 
 s...S                                                                            s...S             s..................................S 
@@ -38,11 +38,11 @@ s...S                                            swwwwwwwwwwwS                  
 s...S                                            s...........S                   s...S
 s...S                                            s...........S                   s...S    
 s...S                                            s...........S                   s...S 
-s...S                                  swwwwwwwwwe...........qwwwwwwwwwwwwwwwwwwwe...S 
+s...S                                  swwwwwwwwww...........wwwwwwwwwwwwwwwwwwwww...S 
 s...S                                  s.............................................S 
 s...S                                  s.............................................S
 s...S                                  s.............................................S
-s...S                                  jwwwwwwwwwe...........qwwwwwwwwwwwwwwwwwwwwwwwJ
+s...S                                  jwwwwwwwwwq...........ewwwwwwwwwwwwwwwwwwwwwwwJ
 s...S                                            s...........S                    
 s...S                                            s...........S    
 jwwwJ                                            s...........S    

@@ -2,7 +2,7 @@ import { k, addGeneralGameLogic } from "../game.js"
 import { generateMapRPG } from "../map.js"
 import { loadKeyboardRPG } from "../keyboard.js"
 
-import "./finish.js"
+import "./level-04.js"
 
 /**
  * Szene für das Level 2.
@@ -26,7 +26,7 @@ k.scene("level-03", async () => {
 
   k.onCollide("player", "door", (player) => {
     if (player.hasKey === true) {
-      k.go("finish")
+      k.go("level-04")
     }
   })
 
