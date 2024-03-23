@@ -1,12 +1,12 @@
 import { TILESIZE } from "./globals.js"
 import { k } from "./game.js"
 
-export function createJackSparrow() {
+export default function createJackSparrow() {
   const jacksparrow = k.add([
     k.sprite("jacksparrow", { anim: "idle1" }),
     k.pos(x * TILESIZE, y * TILESIZE),
     k.area(),
-    k.body(),
+    k.body({ isStatic: true }),
 
     "npc",
   ])
@@ -15,4 +15,8 @@ export function createJackSparrow() {
   //    (obj) => obj.isNot("player"),
   //    () => {},
   //  )
+}
+
+export function getJackSparrow() {
+  return k.get("jacksparrow")[0]
 }
