@@ -47,6 +47,7 @@ export async function generateMapRPG(mapfile) {
       if (char === "p") {
         const player = getPlayer()
         player.pos = k.vec2(x, y).scale(TILESIZE)
+        GameObjects.backgroundRPG(x, y)
       } else if (char === "d") {
         GameObjects.door1RPG(x, y)
       } else if (char === "S") {
@@ -61,12 +62,17 @@ export async function generateMapRPG(mapfile) {
         GameObjects.keyRPG(x, y)
       } else if (char === "w") {
         GameObjects.wallRPG(x, y)
+<<<<<<< HEAD
+      } else if (char === ".") {
+        GameObjects.backgroundRPG(x, y)
+=======
       } else if (char === "e") {
         GameObjects.cornerRightRPG(x, y)
       } else if (char === "q") {
         GameObjects.cornerLeftRPG(x, y)
       } else if (char === "c") {
         NPC.JackSparrow(x, y)
+>>>>>>> 1965ff75dd58a426a4892a61522eb07b61cbacd5
       }
     }
   }
