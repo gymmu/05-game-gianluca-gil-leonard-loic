@@ -46,6 +46,7 @@ export async function generateMapRPG(mapfile) {
       if (char === "p") {
         const player = getPlayer()
         player.pos = k.vec2(x, y).scale(TILESIZE)
+        GameObjects.backgroundRPG(x, y)
       } else if (char === "d") {
         GameObjects.door1RPG(x, y)
       } else if (char === "S") {
@@ -60,6 +61,8 @@ export async function generateMapRPG(mapfile) {
         GameObjects.keyRPG(x, y)
       } else if (char === "w") {
         GameObjects.wallRPG(x, y)
+      } else if (char === ".") {
+        GameObjects.backgroundRPG(x, y)
       }
     }
   }
