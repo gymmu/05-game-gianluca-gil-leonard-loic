@@ -1,4 +1,5 @@
 import { k, addGeneralGameLogic } from "../game.js"
+import createPlayer from "../player.js"
 import { generateMapRPG } from "../map.js"
 import { loadKeyboardRPG } from "../keyboard.js"
 
@@ -11,20 +12,14 @@ import "./level-02.js"
  */
 k.scene("level-01", async () => {
   k.setGravity(0)
+  createPlayer()
   loadKeyboardRPG()
 
   await generateMapRPG("maps/level-01.txt")
 
-  k.add([
-    k.sprite("background", { width: k.width(), height: k.height() }),
-    k.pos(0, 0),
-    k.z(-100),
-    k.fixed(),
-  ])
-
   addGeneralGameLogic()
 
-  k.onCollide("player", "cave", (player) => {
+  k.onCollide("player", "door", (player) => {
     if (player.hasKey === true) {
       k.go("level-02")
     }
