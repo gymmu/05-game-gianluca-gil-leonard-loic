@@ -1,5 +1,6 @@
 import { k } from "../game.js"
 import "./level-01.js"
+import createPlayer from "../player.js"
 
 /**
  * Die Funktion `scene` kommt von Kaboom, und erstellt uns einen
@@ -32,5 +33,6 @@ k.scene("intro", () => {
   // Springen verwenden.
   k.onKeyPress("space", () => {
     k.go("level-01")
+    createPlayer()
   })
 })

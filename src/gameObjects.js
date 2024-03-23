@@ -24,7 +24,7 @@ export function door1RPG(x, y) {
     k.pos(x * TILESIZE, y * TILESIZE + 9),
     k.body({ isStatic: true }),
     k.area(),
-    "cave",
+    "door",
   ])
 }
 
@@ -52,7 +52,7 @@ export function sidePillarRPG(x, y, shiftRight = 0) {
 export function keyRPG(x, y) {
   k.add([
     k.sprite("key"),
-    k.pos(x * TILESIZE, y * TILESIZE),
+    k.pos(x * TILESIZE + 16, y * TILESIZE - 16),
     k.area(),
     k.scale(0.5),
     "key",
@@ -70,6 +70,24 @@ export function keyRPG(x, y) {
 export function wallRPG(x, y) {
   k.add([
     k.sprite("wall"),
+    k.pos(x * TILESIZE, y * TILESIZE),
+    k.body({ isStatic: true }),
+    k.area(),
+  ])
+}
+
+export function cornerRightRPG(x, y) {
+  k.add([
+    k.sprite("cornerRight"),
+    k.pos(x * TILESIZE, y * TILESIZE),
+    k.body({ isStatic: true }),
+    k.area(),
+  ])
+}
+
+export function cornerLeftRPG(x, y) {
+  k.add([
+    k.sprite("cornerLeft"),
     k.pos(x * TILESIZE, y * TILESIZE),
     k.body({ isStatic: true }),
     k.area(),

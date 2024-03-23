@@ -1,9 +1,23 @@
-swwwwwwwwwwwwdwwwwS
-s.................S
-s.................S
-s......p..........S
-s.................S
-s............k....S
-s.................S
-s.................S
-jwwwwwwwwwwwwwwwwwJ
+swwwdwwwwS   swwwwwwwwS
+s........S   s........S
+s........S   s........S
+s..p.....wwwww........S
+s.....................S
+s.....................S
+s........ewwwq........S
+s........S   s........S
+s........S   s........S
+jwwq..ewwJ   jwwq..ewwJ
+   s..S         s..S
+   s..S         s..S
+   s..S         s..S
+swww..wwwS   swww..wwwS
+s........S   s........S
+s........S   s........S
+s........wwwww........S
+s.....................S
+s.....................S
+s..c.....ewwwq........S
+s.k......S   s........S
+s........S   s........S
+jwwwwwwwwJ   jwwwwwwwwJ
