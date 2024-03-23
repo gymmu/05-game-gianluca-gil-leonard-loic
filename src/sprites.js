@@ -87,8 +87,7 @@ export default function loadSprites() {
       sliceX: 2,
       sliceY: 1,
       anims: {
-        idle1: 0,
-        idle2: 1,
+        idle: { from: 0, to: 1, loop: true, speed: 0.2 },
       },
     },
   })
