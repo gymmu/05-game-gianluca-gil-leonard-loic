@@ -146,6 +146,9 @@ export function loadKeyboardRPG() {
     k.onKeyPress("3", () => {
       k.go("level-03")
     })
+    k.onKeyPress("4", () => {
+      k.go("level-04")
+    })
     k.onKeyPress("up", () => {
       player.speed *= 1.5
     })
