@@ -3,6 +3,7 @@ import { TILESIZE } from "./globals.js"
 import { getPlayer } from "./player.js"
 import * as GameObjects from "./gameObjects.js"
 import * as NPC from "./jacksparrow.js"
+import * as ENEMY from "./enemy.js"
 
 /**
  *  Diese Funktion liest eine txt-Datei ein, und erstellt aufgrund der Struktur
@@ -47,7 +48,6 @@ export async function generateMapRPG(mapfile) {
       if (char === "p") {
         const player = getPlayer()
         player.pos = k.vec2(x, y).scale(TILESIZE)
-        GameObjects.backgroundRPG(x, y)
       } else if (char === "d") {
         GameObjects.door1RPG(x, y)
       } else if (char === "S") {
@@ -66,6 +66,8 @@ export async function generateMapRPG(mapfile) {
         GameObjects.cornerRightRPG(x, y)
       } else if (char === "q") {
         GameObjects.cornerLeftRPG(x, y)
+      } else if (char === "o") {
+        ENEMY.Enemy(x, y)
       } else if (char === "c") {
         NPC.JackSparrow(x, y)
       }

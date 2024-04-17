@@ -11,7 +11,3 @@ export function JackSparrow(x, y) {
     "npc",
   ])
 }
-
-export function getJackSparrow() {
-  return k.get("jacksparrow")[0]
-}

@@ -78,6 +78,20 @@ export default function loadSprites() {
     cornerLeft: { x: 0, y: 0, width: TS, height: TS },
   })
 
+  k.loadSpriteAtlas("sprites/enemy.png", {
+    enemy: {
+      x: 0,
+      y: 0,
+      width: 56,
+      height: 64,
+      sliceX: 2,
+      sliceY: 1,
+      anims: {
+        idle: { from: 0, to: 1, loop: true, speed: 0.2 },
+      },
+    },
+  })
+
   k.loadSpriteAtlas("sprites/jacksparrow.png", {
     jacksparrow: {
       x: 0,
