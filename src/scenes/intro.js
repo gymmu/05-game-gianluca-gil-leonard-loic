@@ -22,9 +22,10 @@ k.scene("intro", () => {
   // Objekt verankert werden soll. Versuchen Sie mal was passiert wenn Sie
   // `anchor("botright)` verwenden.
   k.add([
-    k.text("Press SPACE to start", { size: 32 }),
-    k.pos(k.width() / 2, k.height() / 2),
-    k.anchor("center"),
+    k.sprite("mainscreen", { width: k.width(), height: k.height() }),
+    k.pos(0, 0),
+    k.z(-100),
+    k.fixed(),
   ])
 
   // Mit dieser Funktion können wir auf Tastendrucke reagieren. Diese können

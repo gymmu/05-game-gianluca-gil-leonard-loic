@@ -24,6 +24,6 @@ k.scene("lose", () => {
   ])
 
   k.onKeyPress("space", () => {
-    k.go("level-01")
+    k.go("intro")
   })
 })

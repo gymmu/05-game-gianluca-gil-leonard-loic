@@ -50,6 +50,9 @@ export default function loadSprites() {
   /**
    * Hier werden alle sprites für die statischen Spielobjekte geladen.
    */
+  k.loadSpriteAtlas("sprites/mainscreen.png", {
+    mainscreen: { x: 0, y: 0, width: 2000, height: 1143 },
+  })
   k.loadSpriteAtlas("sprites/background.png", {
     background: { x: 0, y: 0, width: 1024, height: 576 },
   })

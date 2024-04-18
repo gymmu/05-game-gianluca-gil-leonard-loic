@@ -18,6 +18,13 @@ k.scene("level-01", async () => {
 
   await generateMapRPG("maps/level-01.txt")
 
+  k.add([
+    k.sprite("background", { width: k.width(), height: k.height() }),
+    k.pos(0, 0),
+    k.z(-100),
+    k.fixed(),
+  ])
+
   addGeneralGameLogic()
 
   k.onCollide("player", "door", (player) => {
