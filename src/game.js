@@ -30,6 +30,7 @@ import { getPlayer } from "./player.js"
  * anpassen, dass es für Sie stimmt. Am besten verwenden Sie hier ein
  * vielfaches von TILESIZE.
  */
+
 export const k = kaboom({
   font: "sinko",
   background: [0, 0, 0],
@@ -120,7 +121,7 @@ function createHPBar() {
 
   bar.add([
     k.rect(HP_BAR_WIDTH, HP_BAR_HEIGHT),
-    k.outline(4, k.GREEN.darken(100)),
+    k.outline(4, k.WHITE.darken(100)),
     k.color(0, 0, 0),
     k.anchor("left"),
     k.pos(10, 0),
@@ -129,7 +130,7 @@ function createHPBar() {
   // Dieser Teil zeigt den grünenden Balken an.
   bar.add([
     k.rect((player.hp() / player.max_hp) * HP_BAR_WIDTH, HP_BAR_HEIGHT),
-    k.color(0, 255, 0),
+    k.color(255, 0, 0),
     k.anchor("left"),
     k.pos(10, 0),
     {

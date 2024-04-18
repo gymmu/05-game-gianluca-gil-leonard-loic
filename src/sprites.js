@@ -82,12 +82,12 @@ export default function loadSprites() {
     enemy: {
       x: 0,
       y: 0,
-      width: 56,
-      height: 64,
-      sliceX: 2,
-      sliceY: 1,
+      width: 384,
+      height: 256,
+      sliceX: 12,
+      sliceY: 8,
       anims: {
-        idle: { from: 0, to: 1, loop: true, speed: 0.2 },
+        idle: { from: 0, to: 2, loop: true, speed: 5 },
       },
     },
   })

@@ -2,6 +2,7 @@ import { k, addGeneralGameLogic } from "../game.js"
 import createPlayer from "../player.js"
 import { generateMapRPG } from "../map.js"
 import { loadKeyboardRPG } from "../keyboard.js"
+import { Enemy } from "../enemy.js"
 
 import "./level-02.js"
 import { JackSparrow } from "../jacksparrow.js"
@@ -56,6 +57,10 @@ k.scene("level-01", async () => {
     k.onCollideEnd("player", "npc", (player, jacksparrow) => {
       text1.destroy()
       boxBack.destroy()
+    })
+
+    k.onCollide("enemy", "player", (player, enemy) => {
+      k.go("level-02")
     })
   })
 })

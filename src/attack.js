@@ -9,10 +9,10 @@ import { k } from "./game.js"
  * Müssen Änderungen am Spieler gemacht werden, kann man das Spielerobjekt über
  * die Funktion `getPlayer()` holen.
  */
-export default function createTrail() {
+export default function createTrail(x, y) {
   const trail = k.add([
     k.sprite("trail", { anim: "move" }),
-    k.pos(),
+    k.pos(x * TILESIZE, y * TILESIZE),
     k.area(),
     k.offscreen({ destroy: true }),
 

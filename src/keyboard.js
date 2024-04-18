@@ -133,9 +133,14 @@ export function loadKeyboardRPG() {
       player.move(k.DOWN.scale(player.speed * diagonalSpeedFactor))
     }
   })
-  k.onMousePress("left", () => {
-    createTrail()
+  k.onMousePress("left", (x, y) => {
+    createTrail(x, y)
   })
+
+  k.onKeyDown("f", () => {
+    setFullscreen(!isFullscreen())
+  })
+
   if (DEBUG) {
     k.onKeyPress("1", () => {
       k.go("level-01")
