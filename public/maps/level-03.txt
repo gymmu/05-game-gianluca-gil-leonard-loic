@@ -14,8 +14,8 @@
                    s......S
 swwwwwwwwwwS       s......S      swwwwwwS    
 s..........S       s......S      s......S    
-s..........wwwwwwwww......wwwwwwww......wwwwwS
-s............................................S
+s..........wwwwwwwww......wwwwdwww......wwwwwS
+s.............................k..............S
 s............................................S
 s..ewwwwwwwwwwwwwqwwww..wwwwwwwewwwwwwq......S  
 s..S             s.............S      s......S  

@@ -23,6 +23,7 @@ k.scene("level-01", async () => {
   k.onCollide("player", "door", (player) => {
     if (player.hasKey === true) {
       k.go("level-02")
+      player.heal(100 - player.hp())
     }
   })
 
@@ -57,10 +58,6 @@ k.scene("level-01", async () => {
     k.onCollideEnd("player", "npc", (player, jacksparrow) => {
       text1.destroy()
       boxBack.destroy()
-    })
-
-    k.onCollide("enemy", "player", (player, enemy) => {
-      k.go("level-02")
     })
   })
 })

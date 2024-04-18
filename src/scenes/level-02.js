@@ -27,6 +27,7 @@ k.scene("level-02", async () => {
   k.onCollide("player", "door", (player) => {
     if (player.hasKey === true) {
       k.go("level-03")
+      player.heal(100 - player.hp())
     }
   })
 

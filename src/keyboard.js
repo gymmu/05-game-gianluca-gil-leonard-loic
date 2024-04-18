@@ -144,15 +144,19 @@ export function loadKeyboardRPG() {
   if (DEBUG) {
     k.onKeyPress("1", () => {
       k.go("level-01")
+      player.heal(100 - player.hp())
     })
     k.onKeyPress("2", () => {
       k.go("level-02")
+      player.heal(100 - player.hp())
     })
     k.onKeyPress("3", () => {
       k.go("level-03")
+      player.heal(100 - player.hp())
     })
     k.onKeyPress("4", () => {
       k.go("level-04")
+      player.heal(100 - player.hp())
     })
     k.onKeyPress("up", () => {
       player.speed *= 1.5
