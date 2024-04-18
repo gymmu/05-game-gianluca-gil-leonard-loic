@@ -3,6 +3,7 @@ import { generateMapRPG } from "../map.js"
 import { loadKeyboardRPG } from "../keyboard.js"
 
 import "./level-04.js"
+import "./level-04.js"
 
 /**
  * Szene für das Level 2.
