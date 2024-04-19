@@ -30,7 +30,7 @@ k.scene("level-04", async () => {
     }
   })
 
-  k.onCollide("player", "door-small", (player) => {
+  k.onCollide("player", "door-small", (player, door) => {
     if (player.hasKey === true) {
       door.destroy()
       player.hasKey = false

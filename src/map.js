@@ -53,6 +53,7 @@ export async function generateMapRPG(mapfile) {
         GameObjects.door1RPG(x, y)
       } else if (char === "D") {
         GameObjects.door2RPG(x, y)
+        GameObjects.backgroundRPG(x, y)
       } else if (char === "S") {
         GameObjects.sideWallRPG(x, y)
       } else if (char === "s") {
