@@ -1,16 +1,16 @@
 import { k, addGeneralGameLogic } from "../game.js"
-import createPlayer from "../player.js"
 import { generateMapRPG } from "../map.js"
 import { loadKeyboardRPG } from "../keyboard.js"
-import { Enemy } from "../enemy.js"
 
 import "./level-02.js"
-import { JackSparrow } from "../jacksparrow.js"
 
 /**
- * Szene für das Level 2.
+ * Szene für das Level 1.
  *
  * Hier gibt es keine Gravitation, wir sind hier in einem RPG-Setting.
+ *
+ * Der Spieler muss in jedem Level nach dem Schlüssel suchen,
+ * da er ohne diesen Schlüssel nicht weiterkommen kann.
  */
 k.scene("level-01", async () => {
   k.setGravity(0)
@@ -18,15 +18,18 @@ k.scene("level-01", async () => {
 
   await generateMapRPG("maps/level-01.txt")
 
+  // Background hinzufügen
   k.add([
     k.sprite("background", { width: k.width(), height: k.height() }),
     k.pos(0, 0),
-    k.z(-100),
-    k.fixed(),
+    k.z(-100), // Die Hintergrund<|instruction|><|bot|>lich zuerst
+    k.fixed(), // Und fixiert, so dass er nicht bewegt wird
   ])
 
   addGeneralGameLogic()
 
+  // Wenn der Spieler die Tür mit dem Schlüssel betritt,
+  // springt er zu level 2 weiter
   k.onCollide("player", "door", (player) => {
     if (player.hasKey === true) {
       k.go("level-02")
@@ -34,22 +37,28 @@ k.scene("level-01", async () => {
     }
   })
 
+  // Wenn der Spieler einen Schlüssel findet, merkt er ihn sich
   k.onCollide("player", "key", (player, key) => {
     key.destroy()
     player.hasKey = true
   })
+
+  // Wenn der Spieler Jack Sparrow trifft,
+  // wird ein Text und ein Rechteck angezeigt,
+  // bis der Spieler den Text nicht mehr betrifft.
   k.onCollide("player", "npc", (player, jacksparrow) => {
-    let boxBack = k.add([
-      k.pos(jacksparrow.pos.add(64, -56)),
-      k.rect(420, 110),
-      k.color(207, 185, 151),
-      k.anchor("center"),
-      k.outline(5, rgb(160, 140, 100)),
+    const boxBack = k.add([
+      k.pos(jacksparrow.pos.add(64, -56)), // Position
+      k.rect(420, 110), // Grösse
+      k.color(207, 185, 151), // Farbe
+      k.anchor("center"), // Ankerpunkt in der Mitte
+      k.outline(5, rgb(160, 140, 100)), // Umriss
     ])
 
-    let text1 = k.add([
+    const text1 = k.add([
       k.text(
-        "Suche in jedem Level stehts nach dem Schlüssel.\nDenn ohne diesen Schlüssel, können wir nicht aufschliessen, was wir nicht haben, das er aufschliesst. Also was für einen Sinn würde es machen, das zu finden was er aufschliesst, was wir nicht haben, ohne zuerst den Schlüssel gefunden zu haben, der es aufschliesst?",
+        "Suche in jedem Level stehts nach dem Schlüssel.\n" +
+          "Denn ohne diesen Schlüssel, können wir nicht aufschliessen, was wir nicht haben, das er aufschliesst. Also was für einen Sinn würde es machen, das zu finden was er aufschliesst, was wir nicht haben, ohne zuerst den Schlüssel gefunden zu haben, der es aufschliesst?",
         {
           size: 17,
           width: 400,
@@ -62,6 +71,7 @@ k.scene("level-01", async () => {
       k.anchor("center"),
       k.color(0, 0, 0),
     ])
+
     k.onCollideEnd("player", "npc", (player, jacksparrow) => {
       text1.destroy()
       boxBack.destroy()
