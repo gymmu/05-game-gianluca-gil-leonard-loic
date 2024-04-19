@@ -19,7 +19,7 @@ s....k...............o.......................S
 s............................................S
 s..ewwwwwwwwwwwwwqwwww..wwwwwwwewwwwwwq..o...S  
 s..S             s.............S      s......S  
-swwwwwwwwwwwS    s.............S      swDewwwJ     
+swwwwwwwwwwwS    s.............S      s..ewwwJ     
 s...........S  sww.............S      s..S       
 s....k......S  s.......o.......wwwS   s..S       
 s..ewwwwwwwwJ  s..................S   s..S       
@@ -35,7 +35,7 @@ s..o.......S s.........o.........S    s.............S
 s..........S s...................S    s.....o.......S
 s..wwwwwwwwS jwwwwwwwwwwwwwwwwwwwJ    s.............S
 s..........S                          s.............S
-s..........wwwwwwwwwwwwwwwwwwwwwwwwwwww.......ewwwwwJ
+s..........wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwDwwewwwwwJ
 s.....o.................................o.....S
 s.............................................S
 s..ewwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwJ
