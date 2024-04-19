@@ -27,6 +27,17 @@ export function door1RPG(x, y) {
     "door",
   ])
 }
+ 
+
+export function door2RPG(x, y) {
+  k.add([
+    k.sprite("door1"),
+    k.pos(x * TILESIZE, y * TILESIZE + 9),
+    k.body({ isStatic: true }),
+    k.area(),
+    "door-small",
+  ])
+}
 
 export function sideWallRPG(x, y, shiftRight = 0) {
   k.add([

@@ -40,6 +40,7 @@ export async function generateMapRPG(mapfile) {
         char !== "\r" &&
         char !== "d" &&
         char !== "J" &&
+        char !== "D" &&
         char !== "j"
       ) {
         GameObjects.backgroundRPG(x, y)
@@ -50,6 +51,8 @@ export async function generateMapRPG(mapfile) {
         player.pos = k.vec2(x, y).scale(TILESIZE)
       } else if (char === "d") {
         GameObjects.door1RPG(x, y)
+      } else if (char === "D") {
+        GameObjects.door2RPG(x, y)
       } else if (char === "S") {
         GameObjects.sideWallRPG(x, y)
       } else if (char === "s") {
