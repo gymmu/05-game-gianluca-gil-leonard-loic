@@ -1,5 +1,5 @@
 
-                   swwwwwwS  
+                   swwdwwwS  
                    s......S
                    s..p...S
                    s......S
@@ -41,11 +41,11 @@ s.............................................S
 s..ewwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwJ
 s..S                                      
 s..S                                      
-swDwwwwwwwwwwwS                 swwwwwwdwwwwwwwS
+swDwwwwwwwwwwwS                 swwwwwwwwwwwwwwS
 s.............S                 s..............S
 s.............S                 s...o..........S
 s.......ewwq..S                 s..............S
-s.......S  s..wwwwwwwwwwwwwwwwwww..............S
+s.......S  s..wwwwwwwwwwwwwwwwwww.....k........S
 s...o...S  s...............................o...S
 s.......S  s..........o........................S
 s.......S  jwwwwwwq......ewwwwwwq....o.........S
@@ -60,6 +60,6 @@ jwwwwwwwJ         jwq..ewJ      jwwwwwwwwwwwwwwJ
                  swww..wwwwS
                  s.........S
                  s.........S
-                 s....k....S
+                 s....p....S
                  s.........S
                  jwwwwwwwwwJ
