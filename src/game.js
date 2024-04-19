@@ -84,18 +84,6 @@ export function addGeneralGameLogic() {
     }
   })
 
-  /** Wenn der Spieler geheilt wird, dann wird seine Geschwindigkeit für 1
-   * Sekunde verdoppelt. Danach wird die Geschwindigkeit wieder zurück
-   * gesetzt.
-   */
-  player.on("heal", () => {
-    const oldSpeed = player.speed
-    player.speed *= 2
-    k.wait(1, () => {
-      player.speed = oldSpeed
-    })
-  })
-
   player.on("death", async () => {
     await import("./scenes/lose.js")
     k.go("lose")
